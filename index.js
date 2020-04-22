@@ -14,7 +14,7 @@ for(let dir of dirs){
       }
     }else{
       for (let file of files) {
-        face[file] = `${dir}/${file}`
+        face[file.reolace(/\.(jpg|png|jpeg|webp)$/, "")] = `${dir}/${file}`
       }
     }
     faces = {...faces, ...face}
